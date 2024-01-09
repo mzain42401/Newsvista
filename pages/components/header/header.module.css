@@ -60,7 +60,7 @@ align-items: center;
     margin-right: 20px;
     }
     .navbar ul  {
-      position: absolute;
+      position:fixed;
       z-index: 999999;
       top: 98.5px;
       right:  -100%;
@@ -76,8 +76,10 @@ align-items: center;
         margin: 18px 0px;
         background-color: rgba(255, 255, 255, 0.107);
         width: 150px;
+        border-radius: 05px;
         text-align: center;
         padding: 5px 10px;
+        scroll-behavior: smooth;
     }
     .navbar ul li a{
         color: #ffae00;
