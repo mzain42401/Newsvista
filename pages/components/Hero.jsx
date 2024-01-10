@@ -1,40 +1,73 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import imga from "../../images/2.png"
+import board from "../../images/board.jpg"
 const Hero = () => {
+    let originalText="PSL Broadcasting Rights Sold for Rs. 6.3 Billion Billion Billion Billion Billion Billion Billion Billion Billion"
+    let maxLength=100
+    const [truncatedText, setTruncatedText] = useState(originalText);
+
+  useEffect(() => {
+    if (originalText.length > maxLength) {
+      setTruncatedText(originalText.substring(0, maxLength) + '...');
+    }
+  }, [truncatedText]);
     return (
         <>
             <section className='flex justify-center items-center w-full '>
                 <div className='md:w-[98%] w-full   flex justify-center items-center flex-wrap '>
-                    <div className='md:w-[50%] w-full h-[460px] overflow-hidden     m-2 bg-black relative'>
-                        <Image src={imga} className='object-cover duration-500 hover:scale-150 object-center h-full w-full opacity-40 absolute  ' alt='img' />
-                        <div class="pl-3 pr-2  pb-4   text-white absolute bottom-0  z-10 w-full">
-                            <p class="leading-relaxed uppercase text-xs text-[#ffae00] font-semibold">educatio</p>
-                            <h1 class="text-2xl w-full font-extrabold title-font mb-2">Shooting Stars Shooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting Starsh</h1>
-                            <p class="mt-2 text-sm ">Learn More
+                    <div className='md:w-[40%] w-full h-[460px] overflow-hidden   bg-black relative'>
+                        <Image src={board} className='object-cover duration-500 hover:scale-150 object-center h-full w-full opacity-60 absolute  ' alt='img' />
+                        <div className="pl-3 pr-2  pb-4   text-white absolute bottom-0  z-10 w-full">
+                            <p className="leading-relaxed uppercase text-xs text-[#ffae00] font-semibold">educatio</p>
+                            <h1 className="text-2xl w-full font-extrabold  font-customFont mb-2">{truncatedText}.</h1>
+                            <p className="mt-2 text-sm ">Learn More
 
                             </p>
                         </div>
                     </div>
 
 
-                    <div className=' relative items-center m-2 md:w-[45%] w-full  '>
-                    <div className='w-full h-[225px] overflow-hidden   my-2 bg-black relative cursor-pointer'>
-                            <Image src={imga} className='object-cover  duration-500 hover:scale-150 object-center h-full w-full opacity-40 absolute  ' alt='img' />
-                            <div class=" text-white absolute    pl-3 pr-2  pb-2 bottom-0  z-10 w-full">
-                                <p class="leading-relaxed uppercase text-xs font-semibold text-[#ffae00]">educatio</p>
-                                <h1 class=" w-full font-extrabold title-font ">Shooting Stars Shooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting Starsh</h1>
-                                <p class=" text-xs ">Learn More
+                    <div className=' relative items-center m-1 md:w-[25%] w-full  '>
+                        <div className='w-full h-[225px] overflow-hidden   my-2 bg-black relative cursor-pointer'>
+                            <Image src={imga} className='object-cover  duration-500 hover:scale-150 object-center h-full w-full opacity-60 absolute  ' alt='img' />
+                            <div className=" text-white absolute    pl-3 pr-2  pb-2 bottom-0  z-10 w-full">
+                                <p className="leading-relaxed uppercase text-xs font-semibold text-[#ffae00]">educatio</p>
+                                <h1 className=" w-full font-extrabold title-font text-base font-customFont ">{truncatedText}</h1>
+                                <p className=" text-xs ">Learn More
 
                                 </p>
                             </div>
                         </div>
                         <div className='w-full h-[225px] overflow-hidden   my-2 bg-black relative cursor-pointer'>
-                            <Image src={imga} className='object-cover  duration-500 hover:scale-150 object-center h-full w-full opacity-40 absolute  ' alt='img' />
-                            <div class=" text-white absolute    pl-3 pr-2  pb-2 bottom-0  z-10 w-full">
-                                <p class="leading-relaxed uppercase text-xs font-semibold text-[#ffae00]">educatio</p>
-                                <h1 class=" w-full font-extrabold title-font ">Shooting Stars Shooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting StarsShooting Starsh</h1>
-                                <p class=" text-xs ">Learn More
+                            <Image src={imga} className='object-cover  duration-500 hover:scale-150 object-center h-full w-full opacity-60 absolute  ' alt='img' />
+                            <div className=" text-white absolute    pl-3 pr-2  pb-2 bottom-0  z-10 w-full">
+                                <p className="leading-relaxed uppercase text-xs font-semibold text-[#ffae00]">educatio</p>
+                                <h1 className=" w-full font-extrabold title-font text-base font-customFont">{truncatedText}</h1>
+                                <p className=" text-xs ">Learn More
+
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className=' relative items-center  md:w-[25%] w-full  '>
+                        <div className='w-full h-[225px] overflow-hidden   my-2 bg-black relative cursor-pointer'>
+                            <Image src={imga} className='object-cover  duration-500 hover:scale-150 object-center h-full w-full opacity-60 absolute  ' alt='img' />
+                            <div className=" text-white absolute    pl-3 pr-2  pb-2 bottom-0  z-10 w-full">
+                                <p className="leading-relaxed uppercase text-xs font-semibold text-[#ffae00]">educatio</p>
+                                <h1 className=" w-full font-extrabold title-font text-base font-customFont">{truncatedText}</h1>
+                                <p className=" text-xs ">Learn More
+
+                                </p>
+                            </div>
+                        </div>
+                        <div className='w-full h-[225px] overflow-hidden   my-2 bg-black relative cursor-pointer'>
+                            <Image src={imga} className='object-cover  duration-500 hover:scale-150 object-center h-full w-full opacity-60 absolute  ' alt='img' />
+                            <div className=" text-white absolute    pl-3 pr-2  pb-2 bottom-0  z-10 w-full">
+                                <p className="leading-relaxed uppercase text-xs font-semibold text-[#ffae00]">educatio</p>
+                                <h1 className=" w-full text-base font-bold  font-customFont">{truncatedText}</h1>
+                                <p className=" text-xs ">Learn More
 
                                 </p>
                             </div>

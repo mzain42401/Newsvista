@@ -22,7 +22,7 @@ align-items: center;
 
 }
 .navbar ul li{
-    padding: 0px 10px;
+    padding: 0px 5px;
 }
 
 .navbar ul li a{
@@ -51,7 +51,7 @@ align-items: center;
 .navToggleBtn:hover{
     color: #e0a80d ;
 }
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 1176px) {
     
     
     .navToggleBtn{
@@ -60,20 +60,20 @@ align-items: center;
     margin-right: 20px;
     }
     .navbar ul  {
-      position:fixed;
+      position:absolute;
       z-index: 999999;
       top: 98.5px;
-      right:  -100%;
+      right:  0%;
       width: 100%;
       height: max-content;
-      
       flex-direction: column;
       background-color: black;
       transition: all 0.9s ease;
       padding-top: 20px;
+      display: none;
     }
     .navbar ul  li{
-        margin: 18px 0px;
+        margin: 11px 0px;
         background-color: rgba(255, 255, 255, 0.107);
         width: 150px;
         border-radius: 05px;
@@ -90,6 +90,8 @@ align-items: center;
     }
   
     .navbar ul.active {
+        display: flex;
+        text-align: center;
       right: 0%;
 margin-right: 0px;
 

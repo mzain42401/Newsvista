@@ -66,6 +66,9 @@ const Header = () => {
             <a onClick={toggleIcons} href="#about">About</a>
           </li>
           <li>
+            <a onClick={toggleIcons} href="#about">Religion</a>
+          </li>
+          <li>
             <a onClick={toggleIcons} href="#services">Sports</a>
           </li>
 
