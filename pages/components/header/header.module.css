@@ -64,8 +64,9 @@ align-items: center;
       z-index: 999999;
       top: 98.5px;
       right:  0%;
-      width: 100%;
-      height: max-content;
+      width: 80%;
+      height: 100vh;
+      /* overflow-y: scroll; */
       flex-direction: column;
       background-color: black;
       transition: all 0.9s ease;
@@ -73,7 +74,7 @@ align-items: center;
       display: none;
     }
     .navbar ul  li{
-        margin: 11px 0px;
+        margin: 5px 0px;
         background-color: rgba(255, 255, 255, 0.107);
         width: 150px;
         border-radius: 05px;
