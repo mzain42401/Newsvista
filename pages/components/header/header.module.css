@@ -74,7 +74,7 @@ align-items: center;
       display: none;
     }
     .navbar ul  li{
-        margin: 5px 0px;
+        margin: 8px 0px;
         background-color: rgba(255, 255, 255, 0.107);
         width: 150px;
         border-radius: 05px;
